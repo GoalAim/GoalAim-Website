@@ -3,7 +3,7 @@ import React from 'react';
 const themes = {
     light: {
         BackgroundColor: '#F2F2F7', 
-        SecondBackgroundColor: '#FFFFFF',
+        SecondaryBackgroundColor: '#FFFFFF',
         BorderColor: '#CCCCCC',
         MainColor: '#29940A',
         SecondaryColor: '#C1EAB5',
@@ -12,7 +12,7 @@ const themes = {
     },
     dark: {
         BackgroundColor: '#1D252F', 
-        SecondBackgroundColor: '#232C39',
+        SecondaryBackgroundColor: '#232C39',
         BorderColor: '#3B485D',
         MainColor: '#29940A',
         SecondaryColor: '#C1EAB5',
