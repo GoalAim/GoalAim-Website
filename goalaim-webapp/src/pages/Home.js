@@ -1,15 +1,24 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../utils/themes/ThemeContext";
 import Stylesheet from "reactjs-stylesheet";
+import { PiArrowArcRight } from "react-icons/pi";
 
 const HomePage = () => {
 
     const {theme} = useContext(ThemeContext);
-    const styles = createStyles(theme);
+    const [width, setWidth] = useState(window.innerWidth);
+    const styles = createStyles(theme, width);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
-        <div style={{display: "flex", flexDirection: "column", position: "absolute", backgroundColor: theme.BackgroundColor, height: "100%", width: "100%"}}>
-            <p style={{fontSize: 20, color: theme.TextColor, textAlign: "center", width: "30%", alignSelf: "center"}}>Get exclusive tips, updates, and insights to help you aim higher and achieve your goals.</p>
+        <div style={{display: "flex", flexDirection: "column", backgroundColor: theme.BackgroundColor, padding: "50px", paddingTop: "100px"}}>
+            {/* <PiArrowArcRight color={theme.TextColor} size={100} style={{position: "absolute", transform: 'rotate(110deg)', alignSelf: "flex-end"}} /> */}
+            <p style={{fontSize: 20, color: theme.TextColor, textAlign: "center", width: width < 1024 ? "80%" : "30%", alignSelf: "center"}}>Get exclusive tips, updates, and insights to help you aim higher and achieve your goals.</p>
             <p style={{fontSize: 64, color: theme.TextColor, textAlign: "center"}}>Be in the Know with <b style={{fontWeight: "bold", color: theme.MainColor}}>GOALAIM!</b></p>
             <div style={styles.inputBlock}>
                 <input style={styles.input} placeholder="Enter your email to aim higher!" />
@@ -26,7 +35,7 @@ const HomePage = () => {
     );
 };
 
-const createStyles = (theme) => Stylesheet.create({
+const createStyles = (theme, width) => Stylesheet.create({
     inputBlock: {
         display: "flex",
         alignItems: "center",
@@ -37,7 +46,7 @@ const createStyles = (theme) => Stylesheet.create({
         borderRadius: 100,
         padding: 15,
         backgroundColor: theme.SecondaryBackgroundColor,
-        width: "30%",
+        width: width < 1024 ? "80%" : "40%",
         alignSelf: "center",
     },
     input: {
