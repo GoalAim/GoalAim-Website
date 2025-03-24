@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../utils/themes/ThemeContext";
 import styled from 'styled-components';
 import { IoMenu } from "react-icons/io5";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { IoColorPaletteSharp } from "react-icons/io5";
 
 const ListElement = styled.li`
@@ -36,15 +36,16 @@ const Navbar = () => {
                 <Box component={"img"} src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
                 {width < 1024 ? <IoMenu size={70} /> : 
                     <ul style={{display: "flex", padding: 0, flexDirection: "row", justifyContent: "space-between", listStyleType: "none", alignItems: "center", width: "50%"}}>
-                    <ListElement>
-                        <NavbarLink to="/" text="Home" />
-                    </ListElement>
-                    <ListElement>
-                        <NavbarLink to="/feedbacks" text="Feedbacks" />
-                    </ListElement>
-                    <ListElement>
-                        <NavbarLink to="/blog" text="Blog" />
-                    </ListElement>
+                        <ListElement>
+                            <NavbarLink to="/" text="Home" />
+                        </ListElement>
+                        <ListElement>
+                            <NavbarLink to="/feedbacks" text="Feedbacks" />
+                        </ListElement>
+                        <ListElement>
+                            <NavbarLink to="/blog" text="Blog" />
+                        </ListElement>
+                        <Button sx={{backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, fontSize: 26, border: "1px solid", borderColor: theme.BorderColor, borderRadius: "100px", textTransform: "none", padding: "5px 40px"}} component={Link} to="/login">Login</Button>
                     </ul>
                 }
                 <IoColorPaletteSharp
