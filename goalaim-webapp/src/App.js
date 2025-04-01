@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
+import Support from './pages/Support';
 
 function App() {
     const [theme, setTheme] = useState({});
@@ -32,6 +33,7 @@ function MainContent() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/support" element={<Support />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
         </>

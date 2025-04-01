@@ -11,6 +11,7 @@ const Login = () => {
         username: '',
         password: ''
     });
+    const [isError, setIsError] = useState(false);
     
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,8 +23,7 @@ const Login = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
-        handleLogin({username: formData.username, password: formData.password});
+        handleLogin({username: formData.username, password: formData.password, setIsError: setIsError});
     };
 
     return (
@@ -55,6 +55,9 @@ const Login = () => {
                         },
             }}} id="password" variant="outlined" placeholder="Password" required onChange={handleChange} value={formData.password} name="password" type="password" />
                     <Button sx={{marginTop: "15px", backgroundColor: theme.MainColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16}} type="submit">Login</Button>
+                </Box>
+                <Box sx={{marginTop: "20px"}}>
+                    {isError ? <Typography sx={{color: theme.ErrorColor}}>You are not autorized to login as an administrator.</Typography> : <Typography sx={{color: theme.TextColor}}>Only for administrators</Typography>}
                 </Box>
                 <Button sx={{marginTop: "100px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 30px", fontSize: 16}} component={Link} to='/'>Back</Button>
             </Box>

@@ -9,6 +9,7 @@ const themes = {
         SecondaryColor: '#C1EAB5',
         TextColor: '#1D252F',
         InputColor: '#E1E1E1',
+        ErrorColor: '#FF0000',
     },
     dark: {
         BackgroundColor: '#1D252F', 
@@ -18,6 +19,7 @@ const themes = {
         SecondaryColor: '#C1EAB5',
         TextColor: '#E1E1E1',
         InputColor: '#D9D9D9',
+        ErrorColor: '#FF0000',
     },
 };
 
