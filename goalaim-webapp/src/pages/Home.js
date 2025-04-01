@@ -52,7 +52,8 @@ const createStyles = (theme, width) => Stylesheet.create({
         fontSize: 16,
         cursor: "pointer",
         fontWeight: "bold",
-        marginLeft: "15px"
+        marginLeft: "15px",
+        ":hover": {backgroundColor: theme.SecondaryColor}
     }
 });
 

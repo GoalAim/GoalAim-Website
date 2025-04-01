@@ -32,7 +32,7 @@ const Login = () => {
                 <Box component={"img"} src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
                 <Typography sx={{color: theme.TextColor, fontSize: 32, fontWeight: "bold", marginBottom: "50px"}}>Login</Typography>
                 <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", flexDirection: "column"}}>
-                    <TextField sx={{input: {color: theme.TextColor}, margin: "10px", width: "40vh", "& .MuiOutlinedInput-root": {
+                    <TextField sx={{input: {color: theme.TextColor}, margin: "10px", width: "80vw", maxWidth: "400px", "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                             borderColor: theme.BorderColor,
                         },
@@ -43,7 +43,7 @@ const Login = () => {
                             borderColor: theme.MainColor,
                         },
             }}} id="username" variant="outlined" placeholder="Username" required onChange={handleChange} value={formData.username} name="username" />
-                    <TextField sx={{input: {color: theme.TextColor}, margin: "10px", width: "40vh", "& .MuiOutlinedInput-root": {
+                    <TextField sx={{input: {color: theme.TextColor}, margin: "10px", width: "80vw", maxWidth: "400px", "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                             borderColor: theme.BorderColor,
                         },
@@ -54,12 +54,12 @@ const Login = () => {
                             borderColor: theme.MainColor,
                         },
             }}} id="password" variant="outlined" placeholder="Password" required onChange={handleChange} value={formData.password} name="password" type="password" />
-                    <Button sx={{marginTop: "15px", backgroundColor: theme.MainColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16}} type="submit">Login</Button>
+                    <Button sx={{marginTop: "15px", backgroundColor: theme.MainColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16, ":hover": {backgroundColor: theme.SecondaryColor}}} type="submit">Login</Button>
                 </Box>
                 <Box sx={{marginTop: "20px"}}>
                     {isError ? <Typography sx={{color: theme.ErrorColor}}>You are not autorized to login as an administrator.</Typography> : <Typography sx={{color: theme.TextColor}}>Only for administrators</Typography>}
                 </Box>
-                <Button sx={{marginTop: "100px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 30px", fontSize: 16}} component={Link} to='/'>Back</Button>
+                <Button sx={{marginTop: "100px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 30px", fontSize: 16, ":hover": {backgroundColor: theme.BorderColor}}} component={Link} to='/'>Back</Button>
             </Box>
         </Box>
     );
