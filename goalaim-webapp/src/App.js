@@ -5,9 +5,10 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import HomePage from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Admin from './pages/Admin';
+// import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Support from './pages/Support';
+import Error404Page from './pages/404';
 
 function App() {
     const [theme, setTheme] = useState({});
@@ -23,15 +24,16 @@ function App() {
 
 function MainContent() {
     const location = useLocation();
-    const hideHeaderFooter = location.pathname === "/admin" || location.pathname === "/login";
+    const hideHeaderFooter = location.pathname !== "/" && location.pathname !== "/support";
 
     return (
         <>
             {!hideHeaderFooter && <Navbar />}
             <Routes>
-                <Route path="*" element={<ComingSoonPage />} />
+                <Route path="*" element={<Error404Page />} />
                 <Route path="/" element={<HomePage />} />
-                <Route path="/admin" element={<Admin />} />
+                {/* <Route path="/admin" element={<Admin />} /> */}
+                <Route path="/blog" element={<ComingSoonPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/support" element={<Support />} />
             </Routes>

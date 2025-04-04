@@ -23,7 +23,7 @@ const Support = () => {
         e.preventDefault();
     
         const portalId = process.env.REACT_APP_PORTAL_ID;
-        const formId = process.env.REACT_APP_FORM_ID;
+        const formId = process.env.REACT_APP_FORM_ID_SUPPORT;
         const url = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
     
         const payload = {
