@@ -40,18 +40,17 @@ const Navbar = () => {
                             <NavbarLink to="/" text="Home" />
                         </ListElement>
                         <ListElement>
-                            <NavbarLink to="/feedbacks" text="Feedbacks" />
+                            <NavbarLink to="/support" text="Support" />
                         </ListElement>
                         <ListElement>
                             <NavbarLink to="/blog" text="Blog" />
                         </ListElement>
-                        <Button sx={{backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, fontSize: 26, border: "1px solid", borderColor: theme.BorderColor, borderRadius: "100px", textTransform: "none", padding: "5px 40px"}} component={Link} to="/login">Login</Button>
+                        <Button sx={{backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, fontSize: 26, border: "1px solid", borderColor: theme.BorderColor, borderRadius: "100px", textTransform: "none", padding: "5px 40px", ":hover": {backgroundColor: theme.BorderColor}}} component={Link} to="/login">Login</Button>
                     </ul>
                 }
                 <IoColorPaletteSharp
-                    style={{ cursor: isHovered ? "pointer" : "default" }}
+                    style={{ cursor: isHovered ? "pointer" : "default", color: isHovered ? theme.TextColor + "88" : theme.TextColor}}
                     size={40}
-                    color={theme.TextColor}
                     onClick={() => toggleTheme()}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
