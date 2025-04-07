@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Support from './pages/Support';
 import Error404Page from './pages/404';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     const [theme, setTheme] = useState({});
@@ -17,6 +18,7 @@ function App() {
     return (
         <ThemeProvider value={{ theme, setTheme }}>
             <BrowserRouter>
+                <ScrollToTop />
                 <MainContent />
             </BrowserRouter>
         </ThemeProvider>
