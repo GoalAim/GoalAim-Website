@@ -1,31 +1,37 @@
 import { useContext } from "react";
 import { ThemeContext } from "../utils/themes/ThemeContext";
 import Box from '@mui/material/Box';
+import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
-// const Curve = () => {
+const ListElement = styled.li`
+`
 
-//     const {theme} = useContext(ThemeContext);
+const FooterLink = ({to, text}) => {
 
-//     return (
-//         <svg width="100%" height="300">
-//             <path
-//                 d="M 0,50
-//                 Q 25,25 40,50
-//                 t 30,30 30,0 30,0 50,0 30,300"
-//                 stroke="black"
-//                 fill={theme.MainColor}
-//             />
-//         </svg>
-//     );
-// };
+    const {theme} = useContext(ThemeContext);
+
+    return (
+        <Link style={{textDecoration: "none", color: theme.TextColor, fontSize: 20}} to={to}>{text}</Link>
+    );
+};
 
 const Footer = () => {
 
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box style={{backgroundColor: theme.BackgroundColor, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-            <Box style={{width: "80%", border: "solid", borderWidth: 2, borderColor: theme.BorderColor, borderRadius: 100, marginTop: "150px", marginBottom: "150px"}}></Box>
+        <Box style={{backgroundColor: theme.BackgroundColor, display: "flex", flexDirection: "column"}}>
+            <Box style={{alignSelf: "center", width: "80%", border: "solid", borderWidth: 2, borderColor: theme.BorderColor, borderRadius: 100, marginTop: "100px", marginBottom: "100px"}}></Box>
+            <Box style={{marginBottom: "50px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-around"}}>
+                <ul style={{display: "flex", flexDirection: "row", justifyContent: "space-between", listStyleType: "none"}}>
+                    <ListElement>
+                        <FooterLink to="/privacy-policy" text="Privacy" />
+                    </ListElement>
+                </ul>
+                <Typography style={{color: theme.TextColor, fontSize: 20}}>© 2025 - GoalAim</Typography>
+            </Box>
         </Box>
     );
 };
