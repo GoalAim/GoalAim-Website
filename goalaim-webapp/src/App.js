@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Support from './pages/Support';
 import Error404Page from './pages/404';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     const [theme, setTheme] = useState({});
@@ -16,6 +18,7 @@ function App() {
     return (
         <ThemeProvider value={{ theme, setTheme }}>
             <BrowserRouter>
+                <ScrollToTop />
                 <MainContent />
             </BrowserRouter>
         </ThemeProvider>
@@ -24,7 +27,7 @@ function App() {
 
 function MainContent() {
     const location = useLocation();
-    const hideHeaderFooter = location.pathname !== "/" && location.pathname !== "/support";
+    const hideHeaderFooter = location.pathname !== "/" && location.pathname !== "/support" && location.pathname !== "/privacy-policy";
 
     return (
         <>
@@ -36,6 +39,7 @@ function MainContent() {
                 <Route path="/blog" element={<ComingSoonPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/support" element={<Support />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
         </>

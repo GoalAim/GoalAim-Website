@@ -33,7 +33,9 @@ const Navbar = () => {
     return (
         <Box style={{padding: "50px", backgroundColor: theme.BackgroundColor}}>
             <nav style={{display: "flex", flexDirection: "row", color: theme.TextColor, justifyContent: "space-around", alignItems: "center"}}>
-                <Box component={"img"} src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
+                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                    <Box component="img" src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
+                </Link>
                 {width < 1024 ? <IoMenu size={70} /> : 
                     <ul style={{display: "flex", padding: 0, flexDirection: "row", justifyContent: "space-between", listStyleType: "none", alignItems: "center", width: "50%"}}>
                         <ListElement>
