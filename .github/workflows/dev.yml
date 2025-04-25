@@ -1,14 +1,12 @@
-name: CI on feature branches
+name: CI on dev branch
 
 on:
   push:
     branches:
-      - feat/*
-      - fix/*
+      - dev
   pull_request:
     branches:
-      - feat/*
-      - fix/*
+      - dev
 
 jobs:
   ci:
@@ -28,3 +26,9 @@ jobs:
 
       - name: Run Jest tests on frontend
         run: npm run test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: GoalAim/GoalAim-Website
