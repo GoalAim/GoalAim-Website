@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom'
 import App from './App';
 
-test('renders learn react link', () => {
+beforeEach(() => {
+  window.scrollTo = jest.fn();
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
+test('home page is the main page and display "GOALAIM!"', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText("GOALAIM!");
   expect(linkElement).toBeInTheDocument();
 });
