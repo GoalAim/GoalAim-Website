@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![codecov](https://codecov.io/gh/GoalAim/GoalAim-Website/graph/badge.svg?token=VX3RO2BRIM)](https://codecov.io/gh/GoalAim/GoalAim-Website)
+
 ## Available Scripts
 
 In the project directory, you can run:
