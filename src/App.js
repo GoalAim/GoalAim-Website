@@ -17,7 +17,12 @@ function App() {
 
     return (
         <ThemeProvider value={{ theme, setTheme }}>
-            <BrowserRouter>
+            <BrowserRouter
+                future={{
+                    v7_relativeSplatPath: true,
+                    v7_startTransition: true,
+                }}
+            >
                 <ScrollToTop />
                 <MainContent />
             </BrowserRouter>
