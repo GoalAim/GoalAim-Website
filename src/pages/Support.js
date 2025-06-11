@@ -62,7 +62,7 @@ const Support = () => {
                             borderColor: theme.BorderColor,
                         },
                         "&:hover fieldset": {
-                            borderColor: theme.SecondaryColor,
+                            borderColor: theme.MainColor,
                         },
                         "&.Mui-focused fieldset": {
                             borderColor: theme.MainColor,
@@ -73,7 +73,7 @@ const Support = () => {
                             borderColor: theme.BorderColor,
                         },
                         "&:hover fieldset": {
-                            borderColor: theme.SecondaryColor,
+                            borderColor: theme.MainColor,
                         },
                         "&.Mui-focused fieldset": {
                             borderColor: theme.MainColor,
@@ -85,7 +85,7 @@ const Support = () => {
                         borderColor: theme.BorderColor,
                     },
                     "&:hover fieldset": {
-                        borderColor: theme.SecondaryColor,
+                        borderColor: theme.MainColor,
                     },
                     "&.Mui-focused fieldset": {
                         borderColor: theme.MainColor,
@@ -96,7 +96,7 @@ const Support = () => {
                         borderColor: theme.BorderColor,
                     },
                     "&:hover fieldset": {
-                        borderColor: theme.SecondaryColor,
+                        borderColor: theme.MainColor,
                     },
                     "&.Mui-focused fieldset": {
                         borderColor: theme.MainColor,
@@ -105,7 +105,7 @@ const Support = () => {
                         color: theme.TextColor,
                     },
                     }}} id="message" variant="outlined" placeholder="Write your message here" required onChange={handleChange} value={formData.message} name="message" multiline rows={6} />
-                <Button sx={{marginTop: "30px", marginBottom: "15px", backgroundColor: theme.MainColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16, ":hover": {backgroundColor: theme.SecondaryColor}}} type="submit">Submit</Button>
+                <Button sx={{marginTop: "30px", marginBottom: "15px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16, ":hover": {backgroundColor: theme.MainColor}}} type="submit">Submit</Button>
                 {isSent === "Sent" ? <Typography sx={{color: theme.MainColor, textAlign: "center"}}>Message sent successfully</Typography> : isSent === "Error" ? <Typography sx={{color: theme.ErrorColor, textAlign: "center"}}>An error occurred while sending the message</Typography> : <></>}
             </Box>
         </Box>

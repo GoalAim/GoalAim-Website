@@ -32,7 +32,7 @@ const Navbar = () => {
         <Box style={{padding: "50px", backgroundColor: theme.BackgroundColor}}>
             <nav style={{display: "flex", flexDirection: "row", color: theme.TextColor, justifyContent: "space-around", alignItems: "center"}}>
                 <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-                    <Box component="img" src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
+                    <Box component="img" src="images/Logo_Original.png" width="100px" alt="GoalAim Logo" />
                 </Link>
                 {width < 1024 ? <IoMenu size={70} onClick={() => setMenuOpen(!menuOpen)} style={{ cursor: "pointer" }} /> : 
                     <ul style={{display: "flex", padding: 0, flexDirection: "row", justifyContent: "space-between", listStyleType: "none", alignItems: "center", width: "50%"}}>

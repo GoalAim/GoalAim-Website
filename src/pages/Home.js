@@ -84,7 +84,7 @@ const createStyles = (theme, width) => Stylesheet.create({
         padding: "15px"
     },
     button: {
-        backgroundColor: theme.MainColor,
+        backgroundColor: theme.BorderColor,
         border: "none",
         color: theme.TextColor,
         borderRadius: 100,
@@ -94,7 +94,7 @@ const createStyles = (theme, width) => Stylesheet.create({
         fontWeight: "bold",
         marginLeft: width < 1024 ? "0px" : "15px",
         marginTop: width < 1024 ? "15px" : "0 px",
-        ":hover": {backgroundColor: theme.SecondaryColor}
+        ":hover": {backgroundColor: theme.MainColor}
     }
 });
 
