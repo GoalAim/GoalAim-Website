@@ -29,7 +29,7 @@ const Login = () => {
     return (
         <Box>
             <Box sx={{backgroundColor: theme.BackgroundColor, height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
-                <Box component={"img"} src="images/goalaim-logo.png" width="100px" alt="GoalAim Logo" />
+                <Box component={"img"} src="images/Logo_Bottom_Right.png" width="100px" alt="GoalAim Logo" />
                 <Typography sx={{color: theme.TextColor, fontSize: 32, fontWeight: "bold", marginBottom: "50px"}}>Login</Typography>
                 <Box component="form" onSubmit={handleSubmit} sx={{display: "flex", flexDirection: "column"}}>
                     <TextField sx={{input: {color: theme.TextColor}, margin: "10px", width: "80vw", maxWidth: "400px", "& .MuiOutlinedInput-root": {
@@ -37,7 +37,7 @@ const Login = () => {
                             borderColor: theme.BorderColor,
                         },
                         "&:hover fieldset": {
-                            borderColor: theme.SecondaryColor,
+                            borderColor: theme.MainColor,
                         },
                         "&.Mui-focused fieldset": {
                             borderColor: theme.MainColor,
@@ -48,13 +48,13 @@ const Login = () => {
                             borderColor: theme.BorderColor,
                         },
                         "&:hover fieldset": {
-                            borderColor: theme.SecondaryColor,
+                            borderColor: theme.MainColor,
                         },
                         "&.Mui-focused fieldset": {
                             borderColor: theme.MainColor,
                         },
             }}} id="password" variant="outlined" placeholder="Password" required onChange={handleChange} value={formData.password} name="password" type="password" />
-                    <Button sx={{marginTop: "15px", backgroundColor: theme.MainColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16, ":hover": {backgroundColor: theme.SecondaryColor}}} type="submit">Login</Button>
+                    <Button sx={{marginTop: "15px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 50px", fontSize: 16, ":hover": {backgroundColor: theme.MainColor}}} type="submit">Login</Button>
                 </Box>
                 <Box sx={{marginTop: "20px"}}>
                     {isError ? <Typography sx={{color: theme.ErrorColor}}>You are not autorized to login as an administrator.</Typography> : <Typography sx={{color: theme.TextColor}}>Only for administrators</Typography>}

@@ -9,7 +9,7 @@ const ComingSoonPage = () => {
 
     return (
         <Box style={{backgroundColor: theme.BackgroundColor, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "100vh"}}>
-            <Box component={"img"} src="images/goalaim-logo.png" alt="logo-goalaim" width="200px" />
+            <Box component={"img"} src="images/Logo_Bottom_Right.png" alt="logo-goalaim" width="200px" />
             <Typography style={{fontFamily: "Poppins", color: theme.TextColor, fontSize: "calc(10px + 3vmin)", marginTop: "25px"}}>Coming soon...</Typography>
             <Button sx={{marginTop: "100px", backgroundColor: theme.SecondaryBackgroundColor, color: theme.TextColor, borderRadius: 2, padding: "10px 30px", fontSize: 16, ":hover": {backgroundColor: theme.BorderColor}}} component={Link} to='/'>Back to GoalAim</Button>
         </Box>
