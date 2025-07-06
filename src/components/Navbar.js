@@ -40,6 +40,9 @@ const Navbar = () => {
                             <NavbarLink to="/" text="Home" />
                         </li>
                         <li style={{margin: "10px"}}>
+                            <NavbarLink to="/faq" text="FAQ" />
+                        </li>
+                        <li style={{margin: "10px"}}>
                             <NavbarLink to="/support" text="Support" />
                         </li>
                         <li style={{margin: "10px"}}>

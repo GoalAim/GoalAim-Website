@@ -36,6 +36,9 @@ const Footer = () => {
                         <FooterLink to="/privacy-policy" text="Privacy" />
                     </li>
                     <li style={{margin: "10px"}}>
+                        <FooterLink to="/faq" text="FAQ" />
+                    </li>
+                    <li style={{margin: "10px"}}>
                         <FooterLink to="/support" text="Support" />
                     </li>
                     <li style={{margin: "10px"}}>
