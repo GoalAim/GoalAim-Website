@@ -3,6 +3,7 @@ import { ThemeContext } from "../utils/themes/ThemeContext";
 import Stylesheet from "reactjs-stylesheet";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
 
@@ -55,6 +56,10 @@ const HomePage = () => {
 
     return (
         <Box sx={{display: "flex", flexDirection: "column", backgroundColor: theme.BackgroundColor, padding: "50px", paddingTop: "100px"}}>
+            <Link to="https://testflight.apple.com/join/1YSQuPZT" style={{ display: "flex", width: "fit-content", alignItems: "center", border: "solid", borderWidth: 1, borderColor: theme.BorderColor, textDecoration: "none", background: theme.SecondaryBackgroundColor, alignSelf: "center", marginBottom: "50px", borderRadius: 10, overflow: "hidden" }}>
+                <Box component="img" src="images/testflight_logo.png" width="60px" alt="GoalAim Logo" style={{"objectFit": "cover"}} />
+                <Typography sx={{color: theme.TextColor, fontSize: 20, marginLeft: "10px", marginRight: "10px"}}>Available on TestFlight</Typography>
+            </Link>
             <Typography sx={{fontSize: 20, color: theme.TextColor, textAlign: "center", width: width < 1024 ? "80%" : "30%", alignSelf: "center"}}>Get exclusive tips, updates, and insights to help you aim higher and achieve your goals.</Typography>
             <Typography sx={{fontSize: width < 1024 ? 56 : 64, color: theme.TextColor, textAlign: "center", marginTop: "30px"}}>Be in the Know with <b style={{fontWeight: "bold", color: theme.MainColor}}>GOALAIM!</b></Typography>
             <Box component="form" onSubmit={handleSubmit} sx={styles.inputBlock}>
