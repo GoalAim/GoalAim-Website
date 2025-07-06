@@ -11,6 +11,7 @@ import Error404Page from './pages/404';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import BlogPage from './pages/Blog';
+import FAQPage from './pages/FAQ';
 
 function App() {
     const [theme, setTheme] = useState({});
@@ -32,7 +33,7 @@ function App() {
 
 function MainContent() {
     const location = useLocation();
-    const hideHeaderFooter = location.pathname !== "/" && location.pathname !== "/support" && location.pathname !== "/privacy-policy" && location.pathname !== "/blog";
+    const hideHeaderFooter = location.pathname !== "/" && location.pathname !== "/support" && location.pathname !== "/privacy-policy" && location.pathname !== "/blog" && location.pathname !== "/faq";
 
     return (
         <>
@@ -44,6 +45,7 @@ function MainContent() {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/support" element={<Support />} />
+                <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
