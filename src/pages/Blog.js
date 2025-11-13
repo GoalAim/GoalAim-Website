@@ -67,6 +67,12 @@ const BlogPage = () => {
             </Typography>
 
             <Article
+                title={"Newsletter, 13th November, 2025"}
+                content={
+                    "GoalAim isn’t just a gamified tracker. It’s a distributed system that connects different data streams into a single visual experience.\n\nWe designed our backend using a modular architecture — separating data ingestion (API connections) from visualization logic. This makes it easier to scale as we integrate new sources.\n\n - Our backend normalizes raw data into standardized progress events.\n   - The app interprets those events to update visual metrics and gamified elements.\n   - Everything is handled through a secure, token-based system ensuring data privacy.\n\nBuilding motivation starts with building good architecture."
+                }
+            />
+            <Article
                 title={"Newsletter, 4th July, 2025"}
                 content={
                     "Hey there! 👋\n\nWelcome to the very first GoalAim newsletter — we’re thrilled to have you on board.\nAt GoalAim, we’re building a productivity app that turns your everyday actions into visible, gamified progress.\n\nWhether you’re coding, listening to music, playing games, or completing tasks — your actions feed your golem and shape your personal evolution.\nWe’ve started connecting with platforms you already use — like GitHub, Spotify, and Steam — to make that progress automatic and meaningful.\n\nAnd here’s the big news:\n\n🧪 Our Alpha version is coming very soon.\nA small group of early testers will get exclusive access to try GoalAim before anyone else, explore the experience, and shape what comes next."
